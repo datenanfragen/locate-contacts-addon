@@ -1,0 +1,39 @@
+{
+	"manifest_version": 2,
+	"name": "Datenanfragen.de contact details locator",
+	"description": "Easily locate email addresses and phone numbers in webpages for use in Datenanfragen.de records.",
+	"version": "1.0",
+	"applications": {
+		"gecko": {
+			"strict_min_version": "54.0a1"
+		}
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"]
+		}
+	],
+
+	"icons": {
+		"48": "icons/icon.svg",
+		"96": "icons/icon.svg"
+	},
+
+	"sidebar_action": {
+		"default_icon": "icons/icon.svg",
+		"default_title": "Contact details locator",
+		"default_panel": "sidebar/panel.html"
+	},
+
+	"permissions": ["<all_urls>", "tabs", "clipboardWrite"],
+
+	"commands": {
+		"_execute_sidebar_action": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+Y"
+			}
+		}
+	}
+}
