@@ -24,6 +24,7 @@ function renderContent() {
 			});
 		};
 		locate_button.title = 'Locate on page';
+		locate_button.style.cursor = 'pointer';
 
 		let copy_btn = document.createElement('img');
 		copy_btn.src = '../icons/copy.svg';
@@ -35,6 +36,7 @@ function renderContent() {
 			}, 100);
 		};
 		copy_btn.title = 'Copy to clipboard';
+		copy_btn.style.cursor = 'pointer';
 
 		let span = document.createElement('span');
 		span.textContent = text;
